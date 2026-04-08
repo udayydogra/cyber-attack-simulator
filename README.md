@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cyber Attack Simulation Platform 
 
-## Getting Started
+A sandboxed web application designed to demonstrate how common cyber attacks work (phishing, web vulnerabilities, API flaws) in a safe and controlled environment. 
 
-First, run the development server:
+## Objective 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project simulates real-world attack scenarios without performing actual exploitation. It is built for: 
+ - CyberSecurity education
+ - Secure coding awareness 
+ - Application Security (AppSec) practice 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+----- 
+## Key Features 
+- Phishing attack simulation (email -> fake login -> result) 
+- Web vulnerabilities (SQL injection, XSS, CSRF)
+- API Security flaws (BOLA, token misuse) 
+- Authentication & session security demos 
+- Attack vs Secure mode comparison 
+- Logging and detection dashboard (planned) 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+------ 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Core Concept 
 
-## Learn More
+The application follows a dual-mode architecture. 
+- ** Vulnerable Mode ** -> intentionally insecure implementation. 
+- ** Secure Mode ** -> properly fixed implementation. 
 
-To learn more about Next.js, take a look at the following resources:
+Example: 
+- /api/vuln/login -> SQL injection possible 
+- /api/secure/login -> parameterized queries 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+------ 
+## Tech Stack 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Frontend:
+- Next
+- Tailwind CSS 
+- Framer Motion 
 
-## Deploy on Vercel
+Backend: 
+- Next.js API Routes 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Database: 
+- PostgreSQL (planned)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Other: 
+- JWT Authentication 
+- Docker (planned) 
+
+-------- 
+
+## Project structure 
+
+src/ 
+├── app/ 
+│ ├── api/ 
+│ │ ├── vuln/ 
+│ │ └── secure/ 
+│ ├── phishing/ 
+│ ├── vulnerabilities/ 
+│ ├── components/ 
+├── lib/
+
+---- 
+
+## Safety and Ethical Use 
+
+This project is strictly designed for educational purpose only. 
+- No real phishing emails are sent. 
+- No real credentials are stored. 
+- All attacks are simulated within a sandbox. 
+- Sensitive inputs are masked or discarded. 
+
+------- 
+## Getting Started 
+
+'''
+git clone git@github.com:udayydogra/cyber-attack-simulator.git
+cd cyber-attack-simulator
+npm install 
+npm run dev 
+'''
+---- 
+
+## Roadmap 
+- [ ] Phishing simulation module
+- [ ] SQL Injection demo
+- [ ] XSS demo
+- [ ] Authentication flaws
+- [ ] API security module
+- [ ] Logging dashboard
+- [ ] Threat modeling section
+
+------- 
+
+## Why This Project 
+
+ This Project is focused on understanding both: 
+- How vulnerabilities are exploited. 
+- How they should be properly fixed. 
+
+It is intended as a hands-on learning platform for Application Security. 
+
+---- 
+### Disclaimer 
+
+This tool must not be used for real-world attacks or unauthorized testing. 
+Ass demonstrations are limited to controlled environments. 
